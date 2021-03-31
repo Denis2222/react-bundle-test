@@ -2,11 +2,12 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/YOUR_COMPONENT.js',
+  entry: './src/ReactCrop',
   output: {
-    path: path.resolve('lib'),
-    filename: 'YOUR_COMPONENT.js',
+    path: path.resolve(__dirname, "dist"),
+    filename: 'ReactCrop.js',
     libraryTarget: 'commonjs2',
+    publicPath: "/dist"
   },
   module: {
     rules: [
@@ -16,10 +17,10 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.scss?$/,
         use: [
-          'style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       }
     ],
