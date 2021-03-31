@@ -2,12 +2,14 @@
     "name": "react-bundle-test",
     "version": "0.1.0",
     "description": "",
-    "main": "./lib/YOUR_COMPONENT.js",
+    "main": "./dist/ReactCrop.js",
+    "style": "./dist/ReactCrop.css",
     "license": "MIT",
     "scripts": {
         "build": " npm run build:js && npm run build:css",
-        "build:js": "webpack",
-        "build:css": "npx node-sass ./src/ReactCrop.scss ./dist/ReactCrop.css"
+        "build:js": "npx webpack",
+        "build:css": "npx node-sass ./src/ReactCrop.scss ./dist/ReactCrop.css",
+        "postinstall": "npm run build"
     },
     "peerDependencies": {
         "prop-types": "^15.6.0",
