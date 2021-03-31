@@ -9,7 +9,8 @@
         "build": " npm run build:js && npm run build:css",
         "build:js": "npx webpack",
         "build:css": "npx node-sass ./src/ReactCrop.scss ./dist/ReactCrop.css",
-        "postinstall": "npm run build"
+        "prepare": "echo \"npm run prepare\" npm run build",
+        "postinstall": "echo \"npm run post install !!!! \" "
     },
     "peerDependencies": {
         "prop-types": "^15.6.0",
